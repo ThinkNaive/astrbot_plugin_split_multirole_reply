@@ -1,0 +1,17 @@
+{
+    "role": {
+        "description": "人格列表",
+        "type": "list",
+        "default": [
+            "多多",
+            "煤球"
+        ],
+        "hint": "包含以下人格时，将按每个人格的回复进行分割。"
+    },
+    "random_delay_range": {
+        "description": "随机延迟时间范围（秒）",
+        "type": "list",
+        "default": [1, 3],
+        "hint": "格式为 [最小值, 最大值]，例如 [1, 3]。"
+    }
+}
