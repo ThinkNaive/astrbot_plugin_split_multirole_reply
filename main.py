@@ -82,9 +82,11 @@ class SplitMultiroleReply(Star):
         # 匹配以'【role】：'开头的语句
         escaped = ([re.escape(name) for name in self.role]
                    if len(self.role) > 0 else ["UNKNOWN"])
-        pattern = re.compile(r"^(【(?:" + "|".join(escaped) + r")】(:|：))",
+        pattern = re.compile(r"(【(?:" + "|".join(escaped) + r")】(:|：))",
                              re.MULTILINE)
-        # to be filled
+        # pattern = re.compile(r"^(【(?:" + "|".join(escaped) + r")】(:|：))",
+        #                 re.MULTILINE)
+
         prev = 0
         for m in pattern.finditer(text):
             if m.start() == 0:
